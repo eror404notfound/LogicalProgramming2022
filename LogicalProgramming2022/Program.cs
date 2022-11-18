@@ -6,34 +6,30 @@ using System.Threading.Tasks;
 
 namespace LogicalProgramming2022
 {
-    internal class Program
+    internal class PerfectNumber
     {
         static void Main(string[] args)
         {
-
-            int firstNumber = 0;
-            int SecondNumber = 1;
-            int nextNumber;
-            int numberOfElements;
-
-            Console.WriteLine("Enter the number of element : ");
-            numberOfElements = Convert.ToInt32(Console.ReadLine());
-            if (numberOfElements < 2)
+            Console.WriteLine("Enter the number check perfect or not : ");
+            int num =Convert.ToInt32(Console.ReadLine());   
+            int temp = 0;
+            for (int i = 1; i < num; i++)
             {
-                Console.WriteLine("Enter the number greater than two : ");
+                if (num%i==0)
+                {
+                    temp=temp+i;
+                }
+            }
+            if (temp == num)
+            {
+                Console.WriteLine($"{num} is a perfect number");
+
             }
             else
             {
-                Console.WriteLine(firstNumber + " " + SecondNumber + " ");
-                for (int i = 2; i < numberOfElements; i++)
-                {
-                    nextNumber = firstNumber + SecondNumber;
-                    Console.Write(nextNumber + " ");
-                    firstNumber = SecondNumber;
-                    SecondNumber = nextNumber;
-                }
-                Console.ReadLine();
+                Console.WriteLine($"{num} is not a perfect number");
             }
+            Console.ReadLine(); 
         }
     }
 }
