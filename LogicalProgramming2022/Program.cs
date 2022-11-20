@@ -21,8 +21,7 @@ namespace LogicalProgramming2022
                 num = num / 10;
             }
             Console.WriteLine($"Reverse number is {revNum}");
-            Console.ReadLine();
-            
+
         }
     }
 }
